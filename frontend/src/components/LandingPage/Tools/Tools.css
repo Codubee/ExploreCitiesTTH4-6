@@ -12,7 +12,3 @@
     width: calc(100vw/3);
     border: 5px solid blue;
 }
-
-CardTitle {
-    text-align: center;
-}
