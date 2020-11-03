@@ -1,10 +1,11 @@
 import React from 'react'
-import react_logo from "./react-logo.gif"
 import "./Tools.css"
 import {
     Card, CardImg, CardBody,
     CardTitle, CardSubtitle
   } from 'reactstrap';
+
+const react_logo = "/react-logo.gif"
 
 class Tools extends React.Component {
     render() {
