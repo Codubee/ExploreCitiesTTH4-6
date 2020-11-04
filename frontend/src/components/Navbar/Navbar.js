@@ -7,9 +7,8 @@ import {
     NavLink,
     NavbarText
   } from 'reactstrap';
-  const example = (props) => {
-//function Navbar(){
-    return(
+function NavbarFunction(){   
+return(
     <div>
         <Navbar color="light" light expand="md">
             <NavbarBrand href="/">ExploreCities</NavbarBrand>
@@ -17,10 +16,17 @@ import {
                 <NavItem>
                     <NavLink href="https://github.com/Codubee/ExploreCitiesTTH4-6">GitHub</NavLink>
                 </NavItem>
+                <NavItem>
+                     <NavLink href="/userinput/">User input</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="/landingpage/">Landing Page</NavLink>
+                </NavItem>
             </Nav>
         <NavbarText>Codubee</NavbarText>
         </Navbar>
     </div>
-    )
+    );
 }
-export default example;
+
+export default NavbarFunction;
