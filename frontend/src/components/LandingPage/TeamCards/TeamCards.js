@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-    Card, CardHeader, CardTitle, CardText, CardDeck, CardBody
+    Card, CardHeader, CardTitle, CardText, CardDeck, CardBody, CardColumns
 } from 'reactstrap';
 
 const TeamCardDeck = (props) => {
     return (
         <CardDeck>
+            <CardColumns>
             <Card body inverse color  = "info">
                 <CardHeader tag = "h2">Team Lead</CardHeader>
                 <CardBody>
@@ -53,6 +54,7 @@ const TeamCardDeck = (props) => {
                     <CardText tag = "h5">Sulemanb Butta is a student at The University of Texas at Dallas and a developer on the team</CardText>
                 </CardBody>
             </Card>
+            </CardColumns>
 
         </CardDeck>
 
