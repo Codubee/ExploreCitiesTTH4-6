@@ -7,10 +7,9 @@ import {
 
 const react_logo = "/react-logo.gif"
 
-class Tools extends React.Component {
-    render() {
-        return (
-          <div>
+function Tools()  {
+    return (
+        <div>
             <h1 id="header">Tools Used:</h1>
             <div id="cards-container">
                 <a href="https://reactjs.org" target="_blank">
@@ -24,8 +23,7 @@ class Tools extends React.Component {
                 </a>
             </div>
           </div>
-        );
-    }
+    )
 }
 
 export default Tools;
