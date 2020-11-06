@@ -13,7 +13,7 @@ function Features()
             <h3>-Additional information provided:</h3>
                 <h5>*Flight costs</h5>
                 <h5>*Uber costs</h5>
-                <h6>*(In case you are interested in visiting!)</h6>
+                    <h6>*(In case you are interested in visiting!)</h6>
     </div>
     );
 }
