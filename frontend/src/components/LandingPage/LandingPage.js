@@ -1,7 +1,8 @@
 import React from 'react'
 import Explanation from './Explanation/Explanation.js'
-//Import components that you create here
+//Imported React and the Explanation component I made
 
+//returns the Explanation component which is to be displayed in the Landing Page
 function LandingPage(){
     return(
         <Explanation/>
