@@ -8,7 +8,7 @@ import {
 // Cards use info background and border color. Cards have header and text components. Other styling handled by imported CSS file.
 const TeamCardDeck = (props) => {
     return (
-        <CardDeck class = "Deck">
+        <CardDeck className = "Deck">
 
             <CardColumns>
 
