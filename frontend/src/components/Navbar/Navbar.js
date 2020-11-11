@@ -5,7 +5,6 @@ import {
     Nav,
     NavItem,
     NavLink,
-    NavbarText
   } from 'reactstrap';
 function NavbarFunction(){   
 return(
@@ -23,7 +22,11 @@ return(
                     <NavLink href="/landingpage/">Landing Page</NavLink>
                 </NavItem>
             </Nav>
-        <NavbarText>Codubee</NavbarText>
+            <Nav className="ml-auto" navbar>
+                <NavItem>
+                    <NavLink href="http://www.codubee.com/">Codubee</NavLink>
+                </NavItem>
+            </Nav>
         </Navbar>
     </div>
     );
