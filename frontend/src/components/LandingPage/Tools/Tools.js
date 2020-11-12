@@ -9,20 +9,24 @@ const react_logo = "/react-logo.gif"
 
 function Tools()  {
     return (
-        <div>
-            <h1 id="header">Tools Used:</h1>
-            <div id="cards-container">
-                <a href="https://reactjs.org" target="_blank">
-                    <Card className="cards">
-                        <CardImg class="logo" src={react_logo} alt="react logo" />
-                        <CardBody>
-                            <CardTitle>React.js</CardTitle>
-                            <CardSubtitle>A JavaScript Framework</CardSubtitle>
-                        </CardBody>
+        <>
+            <h1 id="header">Tools Used</h1>
+
+            <div id="tools-container">
+
+                    <Card className="card">
+                        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
+                            <CardImg src={react_logo} alt="react logo" />
+                            <CardBody className="bg-dark">
+                                <CardTitle className="tool-name">React</CardTitle>
+                                <CardSubtitle className="tool-description">A JavaScript Framework</CardSubtitle>
+                            </CardBody>
+                        </a>
                     </Card>
-                </a>
+
             </div>
-          </div>
+
+          </>
     )
 }
 

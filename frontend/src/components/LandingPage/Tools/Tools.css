@@ -1,13 +1,30 @@
-#cards-container {
+#tools-container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
 #header {
     text-align: center;
+    padding: 10px 0px 10px 0px;
 }
 
-.cards {
-    width: calc(100vw/3);
+.card {
+    flex: 0 1 30%;
+}
+
+.card a {
+    text-decoration: none !important;
+}
+
+.tool-name {
+    font-size: 40px;
+    color: #61DBFB;
+    text-align: center;
+}
+
+.tool-description {
+    font-size: 20px;
+    color: #61DBFB;
+    text-align: center;
 }
