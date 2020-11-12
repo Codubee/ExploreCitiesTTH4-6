@@ -10,5 +10,23 @@
 
 .header
 {
-    text-align: center
+    text-align: center;
+    border-bottom: 3px solid burlywood;
+    line-height: 1.5;
+}
+
+
+.timesnewroman
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bgcolor
+{
+    background-color: blanchedalmond;
+}
+
+.spacing
+{
+    line-height: 1.2;
 }
