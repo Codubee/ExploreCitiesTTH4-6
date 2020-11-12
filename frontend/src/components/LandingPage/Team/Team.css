@@ -1,5 +1,6 @@
 /* sets width for TeamCardDeck in Team.js*/
-.Deck
+
+.Deck 
 {
-    width: 50rem;
+    width: 100%; /*set width to 100% and work with div (className container) tag to add whitespace to both sides*/
 }
