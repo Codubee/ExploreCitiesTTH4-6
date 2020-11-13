@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team.css'
 import {
-    Card, CardHeader, CardText, CardDeck, CardBody, CardColumns
+    Card, CardHeader, CardTitle, CardText, CardDeck, CardBody, CardColumns
 } from 'reactstrap';
 
 //Displays the team's information using cards. The cards are contained in a Card deck and arranged by card columns.
@@ -18,45 +18,51 @@ function TeamCardDeck (props) {
                 <CardColumns>
 
                     <Card body inverse style={{ backgroundColor: '#ffc107', borderColor: '#ffc107'}}> {/* Miguel's card*/}
-                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#BC900B', borderColor: '#BC900B'}}>Team Lead</CardHeader> {/*Position*/}
+                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#BC900B', borderColor: '#BC900B', textAlign:"center"}}>Miguel Zavala</CardHeader> {/*Name*/}
                         <CardBody>
-                            <CardText tag = "h5"> Miguel Zavala is the founder of Codubee. Miguel also acts as the team's leader and mentor.</CardText> {/*Description*/}
+                            <CardTitle tag="h2" className = "text-center">Team Lead</CardTitle> {/*Position*/}
+                            <CardText tag = "h5" className = "text-center"> Miguel Zavala is the founder of Codubee. Miguel also acts as the team's leader and mentor.</CardText> {/*Description*/}
                         </CardBody>
                     </Card>
 
                     {/*The remaining cards follow the same format as the one above*/}
                     <Card body inverse style={{ backgroundColor: '#17A2B8', borderColor: '#17A2B8'}}> {/* Aarushi's card*/}
-                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292'}}>Developer</CardHeader>
+                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292', textAlign:"center"}}>Aarushi Pandey</CardHeader>
                         <CardBody>
-                            <CardText tag = "h5">Aarushi Pandey is a Sophomore at The University of Texas at Dallas majoring in Computer Science.</CardText>
+                            <CardTitle tag="h2" className = "text-center">Developer</CardTitle>
+                            <CardText tag = "h5" className = "text-center">Aarushi Pandey is a Sophomore at The University of Texas at Dallas majoring in Computer Science.</CardText>
                         </CardBody>
                     </Card>
 
                     <Card body inverse style={{ backgroundColor: '#17A2B8', borderColor: '#17A2B8'}}> {/* Gustavo's card*/}
-                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292'}}>Developer</CardHeader>
+                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292', textAlign:"center"}}>Gustavo Oviedo</CardHeader>
                         <CardBody>
-                            <CardText tag = "h5">Gustavo Oviedo is a Junior at The University of Texas at Dallas majoring in Computer Science.</CardText>
+                            <CardTitle tag="h2" className = "text-center">Developer</CardTitle>
+                            <CardText tag = "h5" className = "text-center">Gustavo Oviedo is a Junior at The University of Texas at Dallas majoring in Computer Science.</CardText>
                         </CardBody>
                     </Card>
 
                     <Card body inverse style={{ backgroundColor: '#17A2B8', borderColor: '#17A2B8'}}> {/* Jerry's card*/}
-                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292'}}>Developer</CardHeader>
+                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292', textAlign:"center"}}>Jerry Teng</CardHeader>
                         <CardBody>
-                            <CardText tag = "h5">Jerry Teng is a Sophomore at The University of Texas at Dallas majoring in Computer Science.</CardText>
+                            <CardTitle tag="h2" className = "text-center">Developer</CardTitle>
+                            <CardText tag = "h5" className = "text-center">Jerry Teng is a Sophomore at The University of Texas at Dallas majoring in Computer Science.</CardText>
                         </CardBody>
                     </Card>
 
                     <Card body inverse style={{ backgroundColor: '#17A2B8', borderColor: '#17A2B8'}}> {/* Michael's card*/}
-                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292'}}>Developer</CardHeader>
+                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292', textAlign:"center"}}>Michael George</CardHeader>
                         <CardBody>
-                            <CardText tag = "h5">Michael George is a Sophomore at The University of Texas at Dallas majoring in Computer Science.</CardText>
+                            <CardTitle tag="h2" className = "text-center">Developer</CardTitle>
+                            <CardText tag = "h5" className = "text-center">Michael George is a Sophomore at The University of Texas at Dallas majoring in Computer Science.</CardText>
                         </CardBody>
                     </Card>
 
                     <Card body inverse style={{ backgroundColor: '#17A2B8', borderColor: '#17A2B8'}}> {/* Suleman's card*/}
-                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292'}}>Developer</CardHeader>
+                        <CardHeader tag = "h2" body inverse style={{ backgroundColor: '#208292', borderColor: '#208292', textAlign:"center"}}>Suleman Butta</CardHeader>
                         <CardBody>
-                            <CardText tag = "h5">Suleman Butta is a Junior at The University of Texas at Dallas majoring in Computer Science.</CardText>
+                            <CardTitle tag="h2" className = "text-center">Developer</CardTitle>
+                            <CardText tag = "h5" className = "text-center">Suleman Butta is a Junior at The University of Texas at Dallas majoring in Computer Science.</CardText>
                         </CardBody>
                     </Card>
 
