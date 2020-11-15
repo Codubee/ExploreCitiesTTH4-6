@@ -1,10 +1,13 @@
 import React from 'react'
-import Team from './Team/Team';
-//Import components that you create here
+import Tools from './Tools/Tools'
+import Team from './Team/Team'
+
 function LandingPage(){
     return(
-        //Use components that you import here
-        <Team></Team>
+            <div>
+            <Tools/>
+            <Team/>
+            </div>
     )
 }
 
