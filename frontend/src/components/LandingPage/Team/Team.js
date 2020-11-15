@@ -8,7 +8,7 @@ import {
 // Cards have header and text components with slightly varying colors. Other styling handled by imported CSS file.
 //The entire functional component is contained in a div tag that uses a container to add whitespace.
 //Before the card deck is a header.
-function TeamCardDeck (props) {
+function Team (props) {
     return (
 
         <div className = "container"> {/*Container tag adds whitespace to both sides of element*/}
