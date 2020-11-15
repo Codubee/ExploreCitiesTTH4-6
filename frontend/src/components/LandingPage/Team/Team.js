@@ -12,7 +12,7 @@ function Team (props) {
     return (
 
         <div className = "container"> {/*Container tag adds whitespace to both sides of element*/}
-            <h1 style = {{textAlign:"center"}}>Meet The Team</h1> {/*header*/}
+            <h1 className = "text-center">Meet The Team</h1> {/*header*/}
             <CardDeck className = "Deck">
             
                 <CardColumns>
@@ -73,4 +73,4 @@ function Team (props) {
 
     )
 }
-export default TeamCardDeck;
+export default Team;
