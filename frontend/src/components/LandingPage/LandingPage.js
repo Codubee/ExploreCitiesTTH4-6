@@ -1,11 +1,13 @@
 import React from 'react'
 import Explanation from './Explanation/Explanation.js'
-//Imported React and the Explanation component I made
+import Tools from './Tools/Tools'
 
-//returns the Explanation component which is to be displayed in the Landing Page
 function LandingPage(){
     return(
-        <Explanation/>
+       <>
+          <Explanation/>
+          <Tools/>
+       </>
     )
 }
 

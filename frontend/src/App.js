@@ -1,12 +1,13 @@
 import './App.css';
 import LandingPage from './components/LandingPage/LandingPage'
-//Imported the css file for the App and the LandingPage component
+import Navbar from './components/Navbar/Navbar'
 
-//returns the LandingPage component which is to be displayed in the App
 function App() {
   return (
-    <LandingPage/>
+    <>
+      <Navbar/>
+      <LandingPage/>
+    </>
   );
 }
-
 export default App;
