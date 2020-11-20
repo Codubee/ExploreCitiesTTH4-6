@@ -1,0 +1,34 @@
+/* sets width for TeamCardDeck in Team.js*/
+
+.Deck 
+{
+    width: 100%; /*set width to 100% and work with div (className container) tag to add whitespace to both sides*/
+}
+
+.LeadCardHeader
+{
+    background-color: #BC900B;
+    border-color: #BC900B;
+    text-align: center;
+    width: 100%;
+}
+
+.LeadCardBody
+{
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.DeveloperCardHeader
+{
+    background-color: #208292;
+    border-color: #208292;
+    text-align: center;
+    width: 100%;
+}
+
+.DeveloperCardBody
+{
+    background-color: #17A2B8;
+    border-color: #17A2B8;
+}
