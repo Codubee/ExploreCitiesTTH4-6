@@ -1,0 +1,21 @@
+.container {
+    width: 50%;
+    display: flex;
+    flex-flow : row wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.element {
+    padding: '100px';
+    margin: '100px';
+}
+
+Button {
+    padding-top: '100px';
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
