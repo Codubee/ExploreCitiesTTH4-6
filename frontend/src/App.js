@@ -1,13 +1,18 @@
 import './App.css';
 import LandingPage from './components/LandingPage/LandingPage'
 import Navbar from './components/Navbar/Navbar'
+import {
+  BrowserRouter as Router,
+  Route
+}
+from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      <LandingPage/>
-    </>
+    <Router>
+      <Navbar />
+      <Route path="/landingpage" exact component={LandingPage} />
+    </Router>
   );
 }
 export default App;
