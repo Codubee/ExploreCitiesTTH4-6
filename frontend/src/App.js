@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/landingpage" exact component={LandingPage} />
+      <Route path="/" exact component={LandingPage} />
     </Router>
   );
 }

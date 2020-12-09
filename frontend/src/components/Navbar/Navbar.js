@@ -19,7 +19,7 @@ return(
                      <NavLink href="/userinput/">User input</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/landingpage/">Landing Page</NavLink>
+                    <NavLink href="/">Landing Page</NavLink>
                 </NavItem>
             </Nav>
             <Nav className="ml-auto" navbar>
