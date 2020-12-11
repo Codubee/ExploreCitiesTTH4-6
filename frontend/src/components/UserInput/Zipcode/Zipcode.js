@@ -6,39 +6,6 @@ import TextField from '@material-ui/core/TextField';
 import { Jumbotron } from 'reactstrap'
 import Button from '@material-ui/core/Button';
 
-{/*import React from 'react'
-import "./Zipcode.css"
-import { Form, Input, Button } from 'semantic-ui-react'
-
-const style = <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css'/>
-
-class Zipcode extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            zipcode: null
-        };
-    }
-
-    render() {
-        return(
-            <div id="container">
-            <Form>
-                <Form.Group inline>
-                    <Form.Field>
-                        <label>Enter Zipcode:</label>
-                        <Input placeholder="Zipcode" />
-                    </Form.Field>
-                    <Form.Field control={Button}>Submit</Form.Field>
-                </Form.Group>
-            </Form>
-            </div>
-        );
-    }
-}
-
-export default () => (<div>{style}<Zipcode/></div>) */}
-
 const useStyles = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1),
@@ -47,9 +14,6 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(1),
     },
   }));
-
-
-
 
 class Zipcode extends React.Component {
     constructor(props) {

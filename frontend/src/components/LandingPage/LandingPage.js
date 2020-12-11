@@ -1,15 +1,17 @@
 import React from 'react'
-import Explanation from './Explanation/Explanation.js'
+import Explanation from './Explanation/Explanation'
 import Tools from './Tools/Tools'
-import Zipcode from './Zipcode/Zipcode'
+import Features from './Features/Features'
+import Team from './Team/Team'
 
 function LandingPage(){
     return(
-       <>
-          <Explanation/>
-          <Tools/>
-          <Zipcode/>
-       </>
+      <>
+        <Explanation/>
+        <Features/>
+        <Team/>
+        <Tools/>
+      </>
     )
 }
 
