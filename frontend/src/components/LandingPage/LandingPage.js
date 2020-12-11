@@ -6,8 +6,8 @@ import Zipcode from './Zipcode/Zipcode'
 function LandingPage(){
     return(
        <>
-          {/* <Explanation/>
-          <Tools/> */}
+          <Explanation/>
+          <Tools/>
           <Zipcode/>
        </>
     )
