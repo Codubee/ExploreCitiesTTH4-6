@@ -17,7 +17,7 @@ let uniqueCities = [] // array of unique objects from JSON array. No duplicate c
                     super(props)
                 }
 
-                render(){      
+                render(){
                 normalizeData(this.props.zipCodeData)
                 return(
                 <div className = "container">
@@ -40,6 +40,8 @@ let uniqueCities = [] // array of unique objects from JSON array. No duplicate c
 
             function normalizeData(jsondata) // ensures there are no duplicate cities and that distance is rounded
             {
+                if(jsondata != null && Object.keys(jsondata)!=0) //checks to make sure there is data before mapping over it
+                {
                 jsondata.zip_codes.map((data)=> // Loops through entire JSON array and if the object's city isn't in the map add it to the map and array
             {
                 if(!cityMap.has(data.city)) // checks if city is not in map
@@ -50,6 +52,7 @@ let uniqueCities = [] // array of unique objects from JSON array. No duplicate c
                     uniqueCities.push(data) // add new object to array
                 }
             })
+        }
             }
 
 
