@@ -6,16 +6,10 @@ app.use(express.json())
 
 const port = 8080;
 
-/*var zipcode = sessionStorage.getItem("zipcode");
-console.log(zipcode);
-var zipcode = sessionStorage.getItem("distance");
-console.log(distance);*/
-
 const zipcode = 75080;
 const distance = 50;
 
 app.get('/api/zipcodes',(req,res)=>{
-    //res.send('Hello world');
 
     const headers = {headers: {authorization: process.env.API_KEY}}
 
