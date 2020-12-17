@@ -14,7 +14,7 @@ console.log(distance);*/
 const zipcode = 75080;
 const distance = 50;
 
-app.get('/getZipcodes',(req,res)=>{
+app.get('/api/zipcodes',(req,res)=>{
     //res.send('Hello world');
 
     const headers = {headers: {authorization: process.env.API_KEY}}
@@ -26,13 +26,12 @@ app.get('/getZipcodes',(req,res)=>{
     })
     .catch((error) => {
         console.log(error);
-        res.status(400).json({error: "An error occured"})
+        res.status(400).json({error: "An error occured with the zipcode API"})
     })
 })
 
 app.listen(port,()=>{
-    console.log('API is up and running')
-
+    console.log('Zipcode API is up and running')
 })
 
 module.exports = app;

@@ -25,7 +25,7 @@ class Zipcode extends React.Component {
 
         this.handleZipcodeChange = this.handleZipcodeChange.bind(this);
         this.handleDistanceChange = this.handleDistanceChange.bind(this);
-        //this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleZipcodeChange(event) {
@@ -46,9 +46,46 @@ class Zipcode extends React.Component {
     }*/
 
     /*handleSubmit(event) {
-        this.handleDistanceChange(event);
-        this.handleZipcodeChange(event);
+        var zipcode = this.state.zipcode;
+        sessionStorage.setItem("zipcode", zipcode);
+
+        var distance = this.state.distance;
+        sessionStorage.setItem("distance", distance);
     }*/
+
+    handleSubmit(event) {
+        const express = require('express');
+        const app = express();
+        const axios = require('axios');
+        require('dotenv').config();
+        app.use(express.json())
+
+        const port = 8080;
+
+        const zipcode = 75080;
+        const distance = 50;
+        app.get('/api/zipcodes',(req,res)=>{
+            //res.send('Hello world');
+        
+            const headers = {headers: {authorization: process.env.API_KEY}}
+        
+            axios.get('https://www.zipcodeapi.com/rest/radius.json/'+zipcode+'/'+distance+'/km')
+            .then((response) => {
+                console.log(response)
+                res.status(200).json(response.data)
+            })
+            .catch((error) => {
+                console.log(error);
+                res.status(400).json({error: "An error occured with the zipcode API"})
+            })
+        })
+
+        app.listen(port,()=>{
+            console.log('Zipcode API is up and running')
+        })
+        
+        module.exports = app;
+    }
 
     render() {
         return(
@@ -61,7 +98,7 @@ class Zipcode extends React.Component {
                     <TextField id="outlined-basic" className={useStyles.margin} label="Distance (in km)" variant="outlined" size="small" onChange={this.handleDistanceChange} value={this.state.distance} />
                     &nbsp;&nbsp;
                     <br />
-                    <Button variant="contained" className={useStyles.margin} color="primary" size="medium" /*onClick={this.handleSubmit}*/ >
+                    <Button variant="contained" className={useStyles.margin} color="primary" size="medium" onClick={this.handleSubmit}>
                         Submit
                     </Button> 
                 </form>
