@@ -13,7 +13,8 @@ class Cities extends React.Component {
         this.state = {uniqueCities: [],incomingData:props.data};
     }
     componentDidMount(){
-        this.normalizeData(this.state.incomingData)
+        let temp = {zip_codes:[{zip_code:78704,distance:33,city:"Austin",state:"Teaxs"}]}
+        this.normalizeData(temp)
     }
 
     normalizeData(jsondata) // ensures there are no duplicate cities and that distance is rounded

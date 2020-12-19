@@ -20,13 +20,13 @@ class City extends React.Component {
     }
 
 
-    exploreClicked = () => // if explore button is click route to page with restaurant and activity components
+    exploreClicked() // if explore button is click route to page with restaurant and activity components
     {
         let pathWithZip = "/explore/" + this.props.zipCode
         this.props.history.push({ pathname: pathWithZip });//placeholder file name for page
     }
 
-    showClicked = () => // if show more/less button is clicked change state
+    showClicked()// if show more/less button is clicked change state
     {
         this.setState({
             showMore: !this.state.showMore
