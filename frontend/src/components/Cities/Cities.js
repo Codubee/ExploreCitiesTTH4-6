@@ -5,55 +5,61 @@ import {
     CardColumns,
 } from 'reactstrap'
 
+class Cities extends React.Component {
 
-let cityMap = new Map() // map that contains cities that have been read from data
-let uniqueCities = [] // array of unique objects from JSON array. No duplicate cities.
+    constructor(props) {
+        
+        super(props)
+        this.state = {uniqueCities: [],incomingData:props.data};
+    }
+    componentDidMount(){
+        this.normalizeData(this.state.incomingData)
+    }
 
-           
-            class Cities extends React.Component{
+    normalizeData(jsondata) // ensures there are no duplicate cities and that distance is rounded
+    {
 
-                constructor(props)
+        let cityMap = new Map() // map that contains cities that have been read from data
+        if (jsondata !== null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
+        {
+            let tempArray = []
+             // Loops through entire JSON array and if the object's city isn't in the map add it to the map and array
+            for(var x in jsondata.zip_codes)
+            {
+                var curr = jsondata.zip_codes[x]
+                var city = jsondata.zip_codes[x].city
+
+                if (!cityMap.has(city)) // checks if city is not in map
                 {
-                    super(props)
+                    cityMap.set(curr.city, true) // add new city to map
+                    let miles = curr.distance // get distance
+                    curr.distance = Math.round(miles) //round distance
+                    tempArray.push(curr) // add new object to array
                 }
 
-                render(){
-                normalizeData(this.props.zipCodeData)
-                return(
-                <div className = "container">
-                <CardColumns className = "cityColumns">
-                    {
+            }
+            this.setState({uniqueCities:tempArray});
+        }
+    }
 
-                            uniqueCities.map((data)=> // loop through unique JSON objects and create individual city components
+    render() {
+
+        return (
+            <div className="container">
+                <CardColumns className="cityColumns">
+                    {
+                        this.state.uniqueCities.map((data,id) => // loop through unique JSON objects and create individual city components
                         {
-                            return(
-                                   <City city = {data.city} state = {data.state} zipCode = {data.zip_code} distance = {data.distance}/>
+                            return (
+                                <City key={id} city={data.city} state={data.state} zipCode={data.zip_code} distance={data.distance} />
                             )
                         })
-                        
                     }
                 </CardColumns>
-                </div>
-                )
-                }
-            }
-
-            function normalizeData(jsondata) // ensures there are no duplicate cities and that distance is rounded
-            {
-                if(jsondata != null && Object.keys(jsondata)!=0) //checks to make sure there is data before mapping over it
-                {
-                jsondata.zip_codes.map((data)=> // Loops through entire JSON array and if the object's city isn't in the map add it to the map and array
-            {
-                if(!cityMap.has(data.city)) // checks if city is not in map
-                {
-                    cityMap.set(data.city, true) // add new city to map
-                    let miles = data.distance // get distance
-                    data.distance = Math.round(miles) //round distance
-                    uniqueCities.push(data) // add new object to array
-                }
-            })
-        }
-            }
+            </div>
+        )
+    }
+}
 
 
 export default Cities

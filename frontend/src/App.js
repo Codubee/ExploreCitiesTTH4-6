@@ -1,6 +1,7 @@
 import './App.css';
 import LandingPage from './components/LandingPage/LandingPage'
 import Navbar from './components/Navbar/Navbar'
+import Cities from './components/Cities/Cities'
 import {
   BrowserRouter as Router,
   Route
