@@ -18,34 +18,36 @@ class Zipcode extends React.Component {
     }
 
     handleZipcodeChange(event) {
-        this.setState({zipcode: event.target.value});
+        this.setState({ zipcode: event.target.value });
     }
 
     handleDistanceChange(event) {
-        this.setState({distance: event.target.value});
+        this.setState({ distance: event.target.value });
     }
 
     handleSubmit(event) {
-        //will make zipcode api call here and then route to another component
+        //will make zipcode api call here
     }
 
     render() {
-        return(
+        return (
             <Jumbotron className="zipcode-container">
                 <form className="zipcode-form" noValidate autoComplete="off">
-                    <label><h2>Enter your zip code:&nbsp;</h2></label>
+                    <label>
+                        <h2 className="pr-2">Enter your zip code:</h2>
+                    </label>
                     <TextField id="outlined-basic" label="Zip code" variant="outlined" size="small" onChange={this.handleZipcodeChange} value={this.state.zipcode} />
-                    &nbsp;&nbsp; <br />
-                    <label><h2>Enter how far you want to travel:&nbsp;</h2></label>
+                    <br />
+                    <label>
+                        <h2 className="pr-2">Enter how far you want to travel:</h2>
+                    </label>
                     <TextField id="outlined-basic" label="Distance (in km)" variant="outlined" size="small" onChange={this.handleDistanceChange} value={this.state.distance} />
-                    &nbsp;&nbsp;
                     <br />
                     <Button variant="contained" color="primary" size="medium" onClick={this.handleSubmit} >
                         Submit
-                    </Button> 
+                    </Button>
                 </form>
                 <div className="zipcode-break">
-                    <h2>Zipcode entered is: {this.state.zipcode}, Distance entered is: {this.state.distance} </h2>
                 </div>
             </Jumbotron>
         );
