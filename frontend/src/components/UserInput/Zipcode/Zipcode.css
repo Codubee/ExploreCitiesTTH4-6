@@ -1,0 +1,18 @@
+.zipcode-container {
+    width: 75%;
+    display: flex;
+    flex-flow : row wrap;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    margin-left: 13%;
+}
+
+Button {
+    padding-top: '100px';
+}
+
+.zipcode-break {
+    flex-basis: 100%;
+    height: 0;
+}
