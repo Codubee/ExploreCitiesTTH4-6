@@ -4,7 +4,7 @@ let app =  require('../index')
 chai.should();
 chai.use(chaiHttp);
 
-describe('Tests get enpoint at /',()=>{
+describe('Tests get endpoint at /',()=>{
     it('Should return hello world',(done)=>{
         chai.request(app)
         .get('/')
