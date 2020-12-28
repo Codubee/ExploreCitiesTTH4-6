@@ -37,7 +37,7 @@ class Zipcode extends React.Component {
                     <TextField id="outlined-basic" label="Zip code" variant="outlined" size="small" onChange={this.handleZipcodeChange} value={this.state.zipcode} />
                     &nbsp;&nbsp; <br />
                     <label><h2>Enter how far you want to travel:&nbsp;</h2></label>
-                    <TextField id="outlined-basic" label="Distance (in km)" variant="outlined" size="small" onChange={this.handleDistanceChange} value={this.state.distance} />
+                    <TextField id="outlined-basic" label="Distance (in miles)" variant="outlined" size="small" onChange={this.handleDistanceChange} value={this.state.distance} />
                     &nbsp;&nbsp;
                     <br />
                     <Button variant="contained" color="primary" size="medium" onClick={this.handleSubmit} >
