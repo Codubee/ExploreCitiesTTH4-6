@@ -13,7 +13,7 @@ app.get('/api/zipcodes/',(req,res)=>{
     console.log(zipcode);
     console.log(distance);
 
-    axios.get('https://www.zipcodeapi.com/rest/radius.json/'+zipcode+'/'+distance+'/km')
+    axios.get('https://www.zipcodeapi.com/rest/radius.json/'+zipcode+'/'+distance+'/mile')
     .then((response) => {
         console.log(response)
         res.status(200).json(response.data)
