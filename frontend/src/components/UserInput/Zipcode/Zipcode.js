@@ -2,6 +2,7 @@ import React from 'react'
 import "./Zipcode.css"
 import TextField from '@material-ui/core/TextField';
 import { Jumbotron } from 'reactstrap'
+import Cities from '../Cities/Cities'
 import Button from '@material-ui/core/Button';
 
 class Zipcode extends React.Component {
@@ -48,6 +49,7 @@ class Zipcode extends React.Component {
                     </Button>
                 </form>
                 <div className="zipcode-break">
+                    <Cities/>
                 </div>
             </Jumbotron>
         );
