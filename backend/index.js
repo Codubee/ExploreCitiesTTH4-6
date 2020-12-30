@@ -6,6 +6,24 @@ app.use(express.json());
 
 const PORT = 8080;
 
+app.get('/api/zipcodes/',(req,res)=>{
+
+    zipcode = req.query.zipcode;
+    distance = req.query.distance;
+    console.log(zipcode);
+    console.log(distance);
+
+    axios.get('https://www.zipcodeapi.com/rest/radius.json/'+zipcode+'/'+distance+'/mile')
+    .then((response) => {
+        console.log(response)
+        res.status(200).json(response.data)
+    })
+    .catch((error) => {
+        console.log(error);
+        res.status(400).json({error: "An error occured with the zipcode API"})
+    })
+})
+
 const log = (req, res, next) => {
   console.log(`${req.protocol}://${req.get("host")}${req.originalUrl}`);
   next();
