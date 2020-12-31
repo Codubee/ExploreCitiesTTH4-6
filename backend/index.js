@@ -4,7 +4,7 @@ const axios = require("axios");
 require("dotenv").config();
 app.use(express.json());
 
-const PORT = 8080;
+const PORT = 3000;
 
 app.get('/api/zipcodes/',(req,res)=>{
 
@@ -33,7 +33,6 @@ app.use(log);
 
 app.get('/restaurants/:zip', (req, res) => {
 
-    console.log(req.params.name)
     let zip = req.params.zip;
     const headers = { headers: { 'Authorization': 'Bearer '+process.env.YELP_KEY}}
 
