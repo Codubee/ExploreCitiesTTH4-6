@@ -57,24 +57,23 @@ class Restaurants extends React.Component {
 			<div className="card-container">
 				{this.state.restaurants.map((restaurant) => (
 					<div key={restaurant.id}>
-						<Card className="restaurant">
+						<Card className="restaurant-card">
 							<CardImg
-								src=""
+								src={restaurant.image_url}
 								alt="restaurant image"
-								width="auto"
-								height="auto"
+								className="restaurant-image"
 							/>
 							<CardBody>
-								<CardTitle tag="h5">
+								{/* <CardTitle tag="h5">
 									{restaurant.name}
-								</CardTitle>
-								<CardSubtitle
+								</CardTitle> */}
+								{/* <CardSubtitle
 									tag="h6"
 									className="mb-2 text-muted"
 								>
 									{restaurant.location.display_address}
-								</CardSubtitle>
-								<CardText>{restaurant.display_phone}</CardText>
+								</CardSubtitle> */}
+								{/* <CardText>{restaurant.display_phone}</CardText> */}
 								<Button
 									color="danger"
 									href={restaurant.url}

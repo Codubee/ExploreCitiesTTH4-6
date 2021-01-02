@@ -1,9 +1,15 @@
 .card-container {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	/* justify-content: space-around; */
+	/* margin: 0px 12.5%; */
+	border: 5px solid red;
 }
 
-.restaurant {
+.restaurant-card {
 	flex: 0 1 25%;
+}
+
+.restaurant-image {
+	max-width: 20%;
 }
