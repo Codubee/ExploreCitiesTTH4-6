@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Navbar.css"
 import {
     Navbar,
     NavbarBrand,
@@ -9,7 +10,7 @@ import {
 function NavbarFunction(){   
 return(
     <div>
-        <Navbar color="light" light expand="md">
+        <Navbar light expand="md" id="navbar">
             <NavbarBrand href="/">ExploreCities</NavbarBrand>
             <Nav className="mr-auto" navbar>
                 <NavItem>

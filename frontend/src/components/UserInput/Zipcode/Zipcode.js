@@ -31,7 +31,7 @@ class Zipcode extends React.Component {
 
     render() {
         return (
-            <Jumbotron className="zipcode-container">
+            <Jumbotron className="container zipcode-container">
                 <form className="zipcode-form" noValidate autoComplete="off">
                     <label>
                         <h2 className="pr-2">Enter your zip code:</h2>

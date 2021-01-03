@@ -1,9 +1,26 @@
+body {
+    background-color:  #8FC1E3 !important;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    line-height: 1.2;
+}
+
 .container {
     width: 50%;
+    background-color:  #F7F9FB !important;
+    margin-bottom: 2rem;
+    border-radius: .2rem;
+    color: black;
+    padding: 4rem 2rem !important;
+}
+
+hr {
+    border-top: 3px solid #687864 !important;
 }
 
 .img {
    width: 220px;
+   height: 220px;
+   border-radius: 2px;
 }
 
 .imgContainer {
@@ -14,7 +31,11 @@
 }
 
 .location {
-    background-color:white;
+    background-color:#F7F9FB;
     margin:10px;
     padding: 10px 15px 10px 15px;
+}
+
+.heading {
+    text-align: center;
 }
