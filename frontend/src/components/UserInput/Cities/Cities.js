@@ -56,9 +56,6 @@ class Cities extends React.Component {
 
     render() {
 
-        console.log("Cities render")
-
-
         return (
             <div className="container">
                 <CardColumns className="cityColumns">
