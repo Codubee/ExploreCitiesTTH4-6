@@ -37,7 +37,7 @@ class City extends React.Component {
 
         return (
             <Card>
-                <div className="cityCardHeader"> <CardHeader>{this.props.city}</CardHeader> </div>
+                <div className="cityCardHeader"> <CardHeader tag="h2">{this.props.city}</CardHeader> </div>
                 <CardBody className="cityCardBody">
 
                     {

@@ -15,8 +15,8 @@ const heroku_logo = "/heroku.png"
 
 function Tools()  {
     return (
-        <>
-            <h1 id="header">Technologies Used</h1>
+        <div class="container">
+            <h1 className="header">Technologies Used</h1>
 
             <div id="tools-container">
 
@@ -99,7 +99,7 @@ function Tools()  {
 
             </div>
 
-          </>
+          </div>
     )
 }
 
