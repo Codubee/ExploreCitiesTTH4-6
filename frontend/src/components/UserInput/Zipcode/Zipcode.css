@@ -1,15 +1,15 @@
 .zipcode-container {
-    width: 75%;
     display: flex;
     flex-flow : row wrap;
     text-align: center;
     justify-content: center;
     justify-self: center;
-    margin-left: 13%;
 }
 
 Button {
     padding-top: '100px';
+    background-color: /*#5085A5*/ #31708E !important;
+    color: #F7F9FB !important;
 }
 
 .zipcode-break {

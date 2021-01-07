@@ -1,8 +1,9 @@
 .cityCardHeader
 {
-    background-color: #208292;
-    border-color: #208292;
+    background-color: #31708E;
+    border-color: #31708E;
     text-align: center;
+    color: #f7f9fbee;
 }
 
 .cityCardBody
@@ -16,4 +17,5 @@
 {
     width: 100%;
     background-color: #a8b4b4;
+    border-radius: 5px;
 }
