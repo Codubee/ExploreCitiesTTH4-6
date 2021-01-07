@@ -37,21 +37,23 @@ class City extends React.Component {
 
         return (
             <Card>
-                <div className="cityCardHeader"> <CardHeader><b>{this.props.city}</b></CardHeader> </div>
+                <div className="cityCardHeader"> <CardHeader>{this.props.city}</CardHeader> </div>
                 <CardBody className="cityCardBody">
 
                     {
                         this.state.showMore ? // shows all the city data and explore button if showMore is true
                             <div>
                                 <CardText>
-                                    <u>State</u>: {this.props.state}<br/>
-                                    <u>Zip Code</u>: {this.props.zipCode}<br/>
-                                    <u>Distance</u>: {this.props.distance} mi<br/><br/>
+                                    State: {this.props.state}
+                                    Zip Code: {this.props.zipCode}
+                                    Distance: {this.props.distance} mi
                                 <button className="Button" onClick={this.exploreClicked}>
                                     Explore
                                 </button>
                                 </CardText>
-                                <button className="Button" onClick={this.showClicked}>Show Less</button>
+                                <div className="container">
+                                    <button className="Button" onClick={this.showClicked}>Show Less</button>
+                                </div>
                             </div>
                             : <button className="Button" onClick={this.showClicked}>Show More</button> // only shows show more button if showMore is false
                     }
