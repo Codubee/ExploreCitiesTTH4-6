@@ -8,6 +8,8 @@ import {
 class Cities extends React.Component {
 
     constructor(props) {
+        
+        super(props)
         this.state = {uniqueCities: [],
             incomingData:this.props.data}
     }
@@ -17,11 +19,12 @@ class Cities extends React.Component {
     }
 
 
+
     normalizeData(jsondata) // ensures there are no duplicate cities and that distance is rounded
     {
 
         let cityMap = new Map() // map that contains cities that have been read from data
-        if (jsondata !== null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
+        if (jsondata != null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
         {
             let tempArray = []
              // Loops through entire JSON array and if the object's city isn't in the map add it to the map and array
