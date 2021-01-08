@@ -7,22 +7,22 @@
 
 .LeadCardHeader
 {
-    background-color: #BC900B;
-    border-color: #BC900B;
+    background-color: #157A6E;
+    border-color: #157A6E;
     text-align: center;
     width: 100%;
 }
 
 .LeadCardBody
 {
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: #499F68;
+    border-color: #499F68;
 }
 
 .DeveloperCardHeader
 {
-    background-color: #208292;
-    border-color: #208292;
+    background-color: #31708E;
+    border-color: #31708E;
     text-align: center;
     width: 100%;
 }
