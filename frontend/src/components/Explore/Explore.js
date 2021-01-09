@@ -1,11 +1,12 @@
 import React from "react";
+import Restaurants from "./Restaurants/Restaurants";
 import ThingsToDo from "./ThingsToDo/ThingsToDo";
 function Explore() {
 	return (
 		<>
-            <ThingsToDo/>
+			<Restaurants />
+      <ThingsToDo/>
 		</>
 	);
 }
-
 export default Explore;

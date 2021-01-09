@@ -33,7 +33,6 @@ app.use(log);
 
 app.get('/restaurants/:zip', (req, res) => {
 
-    console.log(req.params.name)
     let zip = req.params.zip;
     const headers = { headers: { 'Authorization': 'Bearer '+process.env.YELP_KEY}}
 
