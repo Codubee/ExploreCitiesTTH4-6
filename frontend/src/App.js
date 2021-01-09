@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Route path="/" exact component={LandingPage} />
       <Route path="/userinput" exact component={UserInput} />
-      <Route path="/test" exact component={Explore} />
+      <Route path="/explore/:zip" exact component={Explore} />
     </Router>
   );
 }
