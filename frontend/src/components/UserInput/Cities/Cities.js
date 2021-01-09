@@ -24,7 +24,7 @@ class Cities extends React.Component {
     {
 
         let cityMap = new Map() // map that contains cities that have been read from data
-        if (jsondata !== null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
+        if (jsondata != null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
         {
             let tempArray = []
              // Loops through entire JSON array and if the object's city isn't in the map add it to the map and array
