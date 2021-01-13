@@ -4,7 +4,7 @@
   "description": "Backend API for react front end",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node index.js"
     "test": "mocha --timeout 10000"
   },
   "keywords": [],
