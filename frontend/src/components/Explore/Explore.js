@@ -4,11 +4,11 @@ import classnames from 'classnames';
 
 const Explore = (props) => {
     const [activeTab, setActiveTab] = useState('1');
-  
+
     const toggle = tab => {
       if(activeTab !== tab) setActiveTab(tab);
     }
-  
+
     return (
       <div>
         <Nav tabs>
@@ -34,8 +34,8 @@ const Explore = (props) => {
             <Row>
               <Col sm="12">
                 <h4>Restaurants component</h4>
-                /* restaurants component is here */
-                /* will do styling later */ 
+                {/* restaurants component is here */}
+               { /* will do styling later */ }
               </Col>
             </Row>
           </TabPane>
@@ -43,8 +43,8 @@ const Explore = (props) => {
             <Row>
             <Col sm="12">
                 <h4>Things to do component</h4>
-                /* things to do component is here */
-                /* will do styling later */ 
+                {/* things to do component is here */}
+                {/* will do styling later */ }
               </Col>
             </Row>
           </TabPane>
@@ -52,6 +52,5 @@ const Explore = (props) => {
       </div>
     );
   }
-  
+
   export default Explore;
-  

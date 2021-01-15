@@ -10,18 +10,21 @@ class Cities extends React.Component {
     constructor(props) {
         
         super(props)
-        this.state = {uniqueCities: [],incomingData:props.data};
+        this.state = {uniqueCities: [],
+            incomingData:this.props.data}
     }
+
     componentDidMount(){
-        let temp = {zip_codes:[{zip_code:78704,distance:33,city:"Austin",state:"Teaxs"}]}
-        this.normalizeData(temp)
+        this.normalizeData(this.props.data) //normalizes props and stores in state
     }
+
+
 
     normalizeData(jsondata) // ensures there are no duplicate cities and that distance is rounded
     {
 
         let cityMap = new Map() // map that contains cities that have been read from data
-        if (jsondata !== null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
+        if (jsondata != null && Object.keys(jsondata) !== 0) //checks to make sure there is data before mapping over it
         {
             let tempArray = []
              // Loops through entire JSON array and if the object's city isn't in the map add it to the map and array
@@ -38,13 +41,20 @@ class Cities extends React.Component {
                     tempArray.push(curr) // add new object to array
                 }
 
+                if(tempArray.length > 11) // terminates loop if 12 objects are added and stores result in state
+                {
+                    this.setState({uniqueCities:tempArray})
+                    break
+                }
+
             }
-            this.setState({uniqueCities:tempArray});
+            this.setState({uniqueCities:tempArray}) //stores result in state
         }
     }
 
-    render() {
 
+
+    render() {
         return (
             <div className="container">
                 <CardColumns className="cityColumns">

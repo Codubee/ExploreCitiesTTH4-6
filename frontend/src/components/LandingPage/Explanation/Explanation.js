@@ -3,10 +3,11 @@ import { Jumbotron } from 'reactstrap'
 import "./Explanation.css"
 //Imported React and Jumbotron from Reactstrap and the css file
 
-const locations = [{"src": "/logo512.png", "location": "Location1"}, {"src": "/logo512.png", "location": "Location2"}
-                    ,{"src": "/logo512.png", "location": "Location3"},{"src": "/logo512.png", "location": "Location4"}
-                    ,{"src": "/logo512.png", "location": "Location5"},{"src": "/logo512.png", "location": "Location6"},
-                    {"src": "/logo512.png", "location": "Location7"}]
+const locations = [{"src": "/images/paris-france.jpg", "location": "Paris, France"}, {"src": "/images/new-york-city-usa.jpg", "location": "New York City, USA"}
+                    ,{"src": "/images/london-england.jpg", "location": "London, England"},{"src": "/images/bangkok-thailand.jpg", "location": "Bnagkok, Thailand"}
+                    ,{"src": "/images/hong-kong-china.jpg", "location": "Honk Kong, China"},{"src": "/images/dubai-united-arab-emirates.jpg", "location": "Dubai, United Arab Emirates"},
+                    {"src": "/images/singapore.jpg", "location": "Singapore"},{"src": "/images/rome-italy.jpg", "location": "Rome, Italy"},
+                    {"src": "/images/istanbul-turkey.jpg", "location": "Istanbul, Turkey"}]
 
 /*const images = locations.map((src, location) => (
     <div>
@@ -30,10 +31,10 @@ function getImages() {
 function Explanation(){
     return(
         <Jumbotron className="container">
-            <h1>What is Explorezy?</h1>
+            <h1 className="heading">What is Explorezy?</h1>
             <hr className="my-2"></hr>  
-            <p>Want to explore new places but COVID-19 happened? Explorezy might be able to help!</p>
-            <ul>
+            <p style={{"font-size": "1.5rem"}}>Want to explore new places but COVID-19 happened? Explorezy might be able to help!</p>
+            <ul style={{"font-size": "1rem"}}>
                 <li>This website will let you explore places virtually in a fun way.</li>
                 <li>Enter your zip code, choose a radius, and get a list of cities near you within that radius.</li>
                 <li>If there's any city you want to visit, 
@@ -41,7 +42,7 @@ function Explanation(){
                 <li>Along with popular tourist spots, you'll receive 
                     information about transportation to those places, and flights and restaurants nearby. </li>
             </ul>
-            <p>Happy travelling!</p>
+            <p style={{"font-size": "1.5rem"}}>Happy travelling!</p>
             <div className="imgContainer">
                 <div className="location">
                     <img src={locations[0].src} className="img" alt={locations[0].src} />
@@ -70,6 +71,14 @@ function Explanation(){
                 <div className="location">
                     <img src={locations[6].src} className="img" alt={locations[6].src} />
                     <figcaption>{locations[6].location}</figcaption>  
+                </div>
+                <div className="location">
+                    <img src={locations[7].src} className="img" alt={locations[7].src} />
+                    <figcaption>{locations[7].location}</figcaption>  
+                </div>
+                <div className="location">
+                    <img src={locations[8].src} className="img" alt={locations[8].src} />
+                    <figcaption>{locations[8].location}</figcaption>  
                 </div>
             </div>  
         </Jumbotron>
