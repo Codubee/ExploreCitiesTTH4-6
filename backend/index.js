@@ -90,8 +90,8 @@ app.get("/api/weather/", (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-  console.log(`API is up and running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`API is up and running on port ${port}`);
 });
 
 module.exports = app;
