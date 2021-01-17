@@ -6,6 +6,17 @@ app.use(express.json());
 
 const port = process.env.PORT || 8080;
 
+const log = (req, _, next) => {
+  console.log(`${req.protocol}://${req.get("host")}${req.originalUrl}`);
+  next();
+};
+
+app.use(log);
+
+app.get("/", (_, res) => {
+  res.send("Hello world");
+});
+
 app.get('/api/zipcodes/',(req,res)=>{
 
     zipcode = req.query.zipcode;
@@ -23,13 +34,6 @@ app.get('/api/zipcodes/',(req,res)=>{
         res.status(400).json({error: "An error occured with the zipcode API"})
     })
 })
-
-const log = (req, res, next) => {
-  console.log(`${req.protocol}://${req.get("host")}${req.originalUrl}`);
-  next();
-};
-
-app.use(log);
 
 app.get('/restaurants/:zip', (req, res) => {
 
@@ -64,10 +68,6 @@ app.get('/thingstodo/:zip', (req, res) => {
     })
 })
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
-});
-
 app.get("/api/weather/", (req, res) => {
   postal_code = req.query.postal_code;
   console.log(postal_code);
@@ -90,8 +90,8 @@ app.get("/api/weather/", (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-  console.log(`API is up and running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`API is up and running on port ${port}`);
 });
 
 module.exports = app;
