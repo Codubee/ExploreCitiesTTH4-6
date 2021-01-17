@@ -35,8 +35,13 @@ To get a local copy up and running follow these simple steps.
 ```sh
 git clone https://github.com/Codubee/ExploreCitiesTTH4-6.git
 ```
-2. Install NPM packages
+2. Install NPM packages in frontend and backend folders
 ```sh
+cd frontend
+npm install
+```
+```sh
+cd backend
 npm install
 ```
 
