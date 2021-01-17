@@ -47,7 +47,7 @@ npm install
 <!-- AVAILABLE SCRIPTS -->
 ## Available Scripts
 
-### Frontend Deployment
+### Frontend
 
 In the frontend directory, you can run:
 
@@ -71,7 +71,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 
-### Backend Deployment
+### Backend
 
 In the frontend directory, you can run:
 
