@@ -21,7 +21,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was created by ___ during the Fall 2020 session of Codubee. We built this project as a safe way to get people out of their homes and visiting local cities.  Covid has made it difficult to travel by air, so this tool explores cities within driving distance of a given zip code.
+This project was created by Aarushi Pandey, Gustavo Oviedo, Jerry Teng, Michael George, and Suleman Butta during the Fall 2020 session of Codubee. We built this project as a safe way to get people out of their homes and visiting local cities.  Covid has made it difficult to travel by air, so this tool explores cities within driving distance of a given zip code.
 
 
 <!-- GETTING STARTED -->
@@ -40,10 +40,16 @@ git clone https://github.com/Codubee/ExploreCitiesTTH4-6.git
 npm install
 ```
 
+3. Set up API KEYS in .env file in backend folder \
+[WEATHER_KEY](https://www.weatherbit.io/api/weather-current) \
+[YELP_KEY](https://www.yelp.com/developers/documentation/v3/authentication)
+
 <!-- AVAILABLE SCRIPTS -->
 ## Available Scripts
 
-In the project directory, you can run:
+### Frontend Deployment
+
+In the frontend directory, you can run:
 
 ### `npm start`
 
@@ -64,6 +70,19 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
+
+### Backend Deployment
+
+In the frontend directory, you can run:
+
+### `npm start`
+
+Runs on [http://localhost:8080](http://localhost:8080)
+
+### `npm test`
+
+Runs a basic test using Mocha
+
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
