@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import Restaurants from './Restaurants/Restaurants'
+import ThingsToDo from './ThingsToDo/ThingsToDo'
 
 const Explore = (props) => {
     const [activeTab, setActiveTab] = useState('1');
@@ -33,8 +35,7 @@ const Explore = (props) => {
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-                <h4>Restaurants component</h4>
-                {/* restaurants component is here */}
+                <Restaurants/>
                { /* will do styling later */ }
               </Col>
             </Row>
@@ -42,8 +43,7 @@ const Explore = (props) => {
           <TabPane tabId="2">
             <Row>
             <Col sm="12">
-                <h4>Things to do component</h4>
-                {/* things to do component is here */}
+                <ThingsToDo/>
                 {/* will do styling later */ }
               </Col>
             </Row>
