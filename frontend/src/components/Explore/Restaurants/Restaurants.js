@@ -143,7 +143,7 @@ class Restaurants extends React.Component {
 			</div>
 		));
 
-		return <div className="restaurants">{restaurantItems}</div>;
+		return <div className="restaurants container">{restaurantItems}</div>;
 	}
 }
 

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import "./Explore.css";
 import Restaurants from './Restaurants/Restaurants'
 import ThingsToDo from './ThingsToDo/ThingsToDo'
 
@@ -13,10 +14,10 @@ const Explore = (props) => {
 
     return (
       <div>
-        <Nav tabs>
+        <Nav tabs className="navbar2">
           <NavItem>
             <NavLink
-              className={classnames({ active: activeTab === '1' })}
+              className={classnames({ active: activeTab === '1' }), 'navlinks'}
               onClick={() => { toggle('1'); }}
             >
               Restaurants
@@ -24,7 +25,7 @@ const Explore = (props) => {
           </NavItem>
           <NavItem>
             <NavLink
-              className={classnames({ active: activeTab === '2' })}
+              className={classnames({ active: activeTab === '2' }), 'navlinks'}
               onClick={() => { toggle('2'); }}
             >
               Things to Do
@@ -36,7 +37,6 @@ const Explore = (props) => {
             <Row>
               <Col sm="12">
                 <Restaurants/>
-               { /* will do styling later */ }
               </Col>
             </Row>
           </TabPane>
@@ -44,7 +44,6 @@ const Explore = (props) => {
             <Row>
             <Col sm="12">
                 <ThingsToDo/>
-                {/* will do styling later */ }
               </Col>
             </Row>
           </TabPane>

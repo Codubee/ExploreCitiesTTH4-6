@@ -1,0 +1,13 @@
+.navlinks {
+    color: #F7F9FB;
+   /* background-color: #687864;*/
+}
+
+.navlinks:hover {
+    cursor: pointer;
+    color:  #E7BB41;
+}
+
+.navbar2 {
+    background-color: #687864; /*#F7F9FB;*/
+}

@@ -24,7 +24,9 @@ app.get('/api/zipcodes/',(req,res)=>{
     console.log(zipcode);
     console.log(distance);
 
-    axios.get('https://www.zipcodeapi.com/rest/radius.json/'+zipcode+'/'+distance+'/mile')
+    const headers = { headers: { 'Authorization': 'Bearer ' + process.env.ZIPCODE_KEY}}
+
+    axios.get('https://www.zipcodeapi.com/rest/radius.json/'+zipcode+'/'+distance+'/mile', headers)
     .then((response) => {
         console.log(response)
         res.status(200).json(response.data)

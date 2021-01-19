@@ -26,6 +26,7 @@ class ThingsToDo extends React.Component {
     }
     render() {
         return (
+        <div class="container">
         <div id="things-container">
             {this.state.thingsToDo.map(thingsToDo =>
             <Card className="things-card">
@@ -63,6 +64,7 @@ class ThingsToDo extends React.Component {
                 </CardBody>
             </Card>
             )}
+        </div>
         </div>
         )
     }
